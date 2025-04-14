@@ -11,27 +11,32 @@ while True:
     print("4️⃣  ❌ Quitter")
     print("")
     
-    choix = input("Choisissez une option (1-3) : ")
-    print("")
-    
-    if choix == "1":
+    try:
+        choix = int(input("Choisissez une option (1-4) : "))
         
-        print("📋 Mes contacts :")
-        display_contact()
-        print("")
-    
-    
-    elif choix == "2":
-        print("🔍 Rechercher un contact :")
-        search_contact()
-        print("")
-        
-    elif choix == "3":
-        print("➕ Ajouter un contact :")
-        add_contact()
-        print("")
-        
-        
-    elif choix == "4":
-        print("Au revoir !")
-        break
+        if choix not in [1, 2, 3, 4]:
+            print("❌ Choix invalide. Veuillez choisir une option valide.")
+        else:
+            print("")
+            
+            if choix == 1:
+                print("📋 Mes contacts :")
+                display_contact()
+                print("")
+            
+            elif choix == 2:
+                print("🔍 Rechercher un contact :")
+                search_contact()
+                print("")
+                
+            elif choix == 3:
+                print("➕ Ajouter un contact :")
+                add_contact()
+                print("")
+                
+            elif choix == 4:
+                print("👋 Au revoir !")
+                break
+
+    except ValueError:
+        print("❌ Entrée invalide. Veuillez entrer un chiffre.")

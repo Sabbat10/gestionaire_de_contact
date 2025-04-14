@@ -1,4 +1,4 @@
-contact = [
+contacts = [
     {
         "name": "John Doe",
         "number": 990312922,

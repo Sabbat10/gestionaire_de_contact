@@ -1,4 +1,4 @@
-from contact.contact import display_contact
+from contact.contact import display_contact, search_contact
 
 while True:
     
@@ -18,18 +18,16 @@ while True:
         
         print("📋 Mes contacts :")
         display_contact()
-        
         print("")
     
     
     elif choix == "2":
         print("🔍 Rechercher un contact :")
-        
+        search_contact()
         print("")
         
     elif choix == "3":
         print("➕ Ajouter un contact :")
-        
         print("")
         
         

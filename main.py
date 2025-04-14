@@ -1,4 +1,4 @@
-from contact.contact import display_contact, search_contact
+from contact.contact import display_contact, search_contact, add_contact
 
 while True:
     
@@ -28,6 +28,7 @@ while True:
         
     elif choix == "3":
         print("➕ Ajouter un contact :")
+        add_contact()
         print("")
         
         

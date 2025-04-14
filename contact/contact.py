@@ -5,10 +5,15 @@ import re
 def display_contact():
     
     for contact in contacts:
+        numero = str(contact['number'])
+        if not numero.startswith("0"):
+            numero = "0" + numero
+
         print(f"👤 Nom     : {contact['name']}")
-        print(f"📞 Numéro  : 0{contact['number']}")
+        print(f"📞 Numéro  : {numero}")
         print(f"📧 Email   : {contact['email']}")
-        print("")  
+        print("═══════════════════════════════")
+
 
 
 # Fonction pour rechercher un contact
@@ -18,10 +23,16 @@ def search_contact():
     print("")
     found = False
     
+    
     for contact in contacts:
+        
+        numero = str(contact['number'])
+        if not numero.startswith("0"):
+            numero = "0" + numero
+        
         if (nom in contact['name'].lower()):
             print(f"👤 Nom     : {contact['name']}")
-            print(f"📞 Numéro  : 0{contact['number']}")
+            print(f"📞 Numéro  : {numero}")
             print(f"📧 Email   : {contact['email']}")
             found = True
             break

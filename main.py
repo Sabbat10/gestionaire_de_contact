@@ -1,3 +1,4 @@
+from contact.contact import display_contact
 
 while True:
     
@@ -16,6 +17,7 @@ while True:
     if choix == "1":
         
         print("📋 Mes contacts :")
+        display_contact()
         
         print("")
     
